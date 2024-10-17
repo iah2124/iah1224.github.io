@@ -1,0 +1,16 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Iris' awesome website
+
+Sometimes I use [google](http://google.com) to do data science when I am stuck 
+
+This is a bday celly. 
+![](dachshund.jpg)
+
+If you like to learn more about this website, visit [this page](about.html)
