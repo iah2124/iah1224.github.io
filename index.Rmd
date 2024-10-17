@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-# This is Iris' awesome website
+# This is Iris's awesome website
 
 Sometimes I use [google](http://google.com) to do data science when I am stuck 
 
