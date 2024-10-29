@@ -11,7 +11,7 @@ output:
 Sometimes I use [google](http://google.com) to do data science when I am stuck 
 
 This is a halloween celly. 
-![](200.gif)
+![](200w.webp)
 
 If you like to learn more about this website, visit [this page](about.html)
 
