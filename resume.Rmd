@@ -24,7 +24,7 @@ GPA: 3.7, Cum Laude
 
 ### Work Experience
 #### Pfizer, Inc.	                        									
-Medical Affairs Marketing Intern | 	New York, NY | June 2023-Aug 2023
+_Medical Affairs Marketing Intern_ | 	New York, NY | June 2023-Aug 2023
 
 •	Generated comprehensive literature reviews on prevalence rates for alopecia areata and aspergillosis, identifying key trends and gaps in emerging markets such as Brazil, UAE, Mexico, and Taiwan
 
@@ -33,7 +33,7 @@ Medical Affairs Marketing Intern | 	New York, NY | June 2023-Aug 2023
 •	Collaborated with cross-functional teams to compare Pfizer’s proprietary data with open-source information, ensuring accuracy and reliability in prevalence insights
 
 #### Dana-Farber Cancer Institute - Dieli-Conwright Exercise Oncology Research Laboratory
-Research Intern | Boston, MA | Sep 2022-Dec 2022
+_Research Intern_ | Boston, MA | Sep 2022-Dec 2022
 
 • Conducted screenings for 300 breast cancer patients using Epic Systems to assess eligibility for participation in the Adiposity
 Inflammation Movement study, which investigates the impact of exercise on BMI reduction, and therefore breast cancer
@@ -45,7 +45,7 @@ outcomes
 external factors affecting exercise capabilities
 
 #### Brigham and Women’s Hospital - Channing Division of Network Medicine Research 
-Research Coder | Boston, MA | June 2022 – Aug 2022
+_Research Coder_ | Boston, MA | June 2022 – Aug 2022
 
 • Evaluated 500 Nurses' Health Study questionnaires through coding procedures in order to determine risk factors for major
 chronic diseases in women. Identified risk factors will be used to investigate interventions for targeting major chronic diseases
@@ -56,7 +56,7 @@ chronic diseases in women. Identified risk factors will be used to investigate i
 adiposity
 
 #### Stanford University School of Medicine - The Solutions Science Laboratory
-Research Intern | Stanford, CA | June 2021 – Oct 2021
+_Research Intern_ | Stanford, CA | June 2021 – Oct 2021
 
 • Reduced the prevalence of obesity by 80% within participants in the Stanford Pediatric Weight Control Program, through
 expansion of program materials such as exercise routines, healthy eating, and behavioral habits
@@ -67,7 +67,7 @@ based content
 • Secured internship funding as a recipient of the Boston University Yawkey Nonprofit Internship Program Award
 
 #### Stanford University School of Medicine - District Coding with Stanford Pediatrics 
-Research Intern | Stanford, CA | June 2020 – May 2021
+_Research Intern_ | Stanford, CA | June 2020 – May 2021
 
 • Gathered data from California Public School District websites, social media pages, and local news sources pertaining to meal
 service protocols during the COVID-19 school closures
