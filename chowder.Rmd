@@ -6,5 +6,5 @@ output:
     toc_float: true
 ---
 
-
+Mr. Chow secret hex sticker! Claim below:
 ![](Chowder.jpg)
