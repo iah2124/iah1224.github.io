@@ -1,0 +1,17 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+# Iris Hart
+
+email (650)644-7915 [linkedin](https://www.linkedin.com/in/irishart/)
+
+## Education
+### COLUMBIA UNIVERSITY Mailman School of Public Health
+Master of Public Health - Epidemiology Expected May 2025
+Relevant Coursework - Research Methods & Applications, Health Systems, Health Econ, and Public Health Interventions
