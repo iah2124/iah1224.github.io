@@ -1,5 +1,5 @@
 ---
-title: "Instacart Data Dashboard"
+title: "My awesome website"
 output: 
   html_document:
     toc: true

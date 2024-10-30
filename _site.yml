@@ -10,7 +10,7 @@ navbar:
     - text: "Resume"
       href: resume.html
     - text: "Instacart Data Dashboard"
-    - href: instacart_dashbaord.html
+      href: instacart_dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:iah2124@cumc.columbia.edu
     - icon: fa-github fa-lg
@@ -18,4 +18,5 @@ navbar:
 output:
   html_document:
     theme: paper
+
     
