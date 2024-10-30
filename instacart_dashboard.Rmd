@@ -1,31 +1,72 @@
 ---
-title: "instacart_dashboard"
+title: "Instacart Data Dashboard"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+```{r setup, include = FALSE}
+# Load required libraries
+library(p8105.datasets)
+library(plotly)
+library(dplyr)
+library(ggplot2)
+
+# Load and prepare data as shown above
+data("instacart", package = "p8105.datasets")
+instacart_df = instacart %>%
+  mutate(weekday = factor(order_dow, labels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")),
+         hour_of_day = factor(order_hour_of_day)) %>%
+  filter(!is.na(aisle_id))
 ```
 
-## R Markdown
+### Most Ordered Aisles - Bar Plot
+```{r}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Count of orders per aisle
+aisle_counts <- instacart_df %>%
+  group_by(aisle) %>%
+  summarize(order_count = n()) %>%
+  arrange(desc(order_count)) %>%
+  slice_max(order_count, n = 10)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+# Create bar plot
+bar_plot <- ggplot(aisle_counts, aes(x = reorder(aisle, order_count), y = order_count)) +
+  geom_bar(stat = "identity", fill = "tomato") +
+  labs(
+    title = "Top 10 Most Ordered Aisles",
+    x = "Aisle",
+    y = "Order Count"
+  ) +
+  coord_flip() +
+  theme_minimal()
 
-```{r cars}
-summary(cars)
+ggplotly(bar_plot)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+### Orders by Day and Hour - Scatterplot
+```{r, message = FALSE}
+scatter_data <- instacart_df %>%
+  group_by(weekday, hour_of_day) %>%
+  summarize(order_count = n()) %>%
+  ungroup()
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+scatter_plot <- ggplot(scatter_data, aes(x = hour_of_day, y = order_count, color = weekday)) +
+  geom_point(alpha = 0.7) +
+  labs(
+    title = "Scatter Plot of Orders by Hour and Day",
+    x = "Hour of Day",
+    y = "Order Count"
+  ) +
+  theme_minimal()
+
+ggplotly(scatter_plot)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+

@@ -23,33 +23,3 @@ df |>
   geom_point()
 ```
 
-```{r}
-install.packages("p8105.datasets")
-install.packages("plotly")
-```
-
-```{r}
-library(p8105.datasets)
-library(tidyverse)
-library(plotly)
-library(dplyr)
-library(ggplot2)
-library(flexdashboard)
-```
-
-```{r}
-data("instacart", package = "p8105.datasets")
-glimpse(instacart)
-```
-
-```{r}
-instacart_df = instacart |>
-  mutate(
-    weekday = factor(order_dow, labels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")),
-         hour_of_day = factor(order_hour_of_day)) %>%
-  filter(!is.na(aisle_id))
-```
-
-```{r}
-view(instacart_df)
-```
