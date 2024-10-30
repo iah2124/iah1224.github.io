@@ -9,6 +9,8 @@ navbar:
       href: plots.html
     - text: "Resume"
       href: resume.html
+    - text: "Flexdashboard"
+    - href: instacart_dashbaord.html
     - icon: fa-envelope fa-lg
       href: mailto:iah2124@cumc.columbia.edu
     - icon: fa-github fa-lg
