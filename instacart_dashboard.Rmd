@@ -70,7 +70,7 @@ scatter_plot <- ggplot(scatter_data, aes(x = hour_of_day, y = order_count, color
 ggplotly(scatter_plot)
 ```
 
-## Data for Bar Plot
+## Total Instacart Orders Over Time by Number of Orders - Line Graph
 ```{r}
 # Data for Line Plot
 line_data <- instacart_df %>%
