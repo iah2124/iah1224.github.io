@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-## here is some information about instacart online grocery shopping in 2017. 
+Here is some information about instacart online grocery shopping in 2017. 
 
 ```{r setup, include = FALSE}
 # Load required libraries
@@ -26,7 +26,7 @@ instacart_df = instacart |>
   filter(!is.na(aisle_id))
 ```
 
-### Most Ordered Aisles - Bar Plot
+## Most Ordered Aisles - Bar Plot
 ```{r}
 
 # Count of orders per aisle
@@ -51,7 +51,7 @@ ggplotly(bar_plot)
 ```
 
 
-### Orders by Day and Hour - Scatterplot
+## Orders by Day and Hour - Scatterplot
 ```{r, message = FALSE}
 scatter_data <- instacart_df %>%
   group_by(weekday, hour_of_day) %>%
@@ -70,7 +70,7 @@ scatter_plot <- ggplot(scatter_data, aes(x = hour_of_day, y = order_count, color
 ggplotly(scatter_plot)
 ```
 
-# Data for Bar Plot
+## Data for Bar Plot
 ```{r}
 # Data for Line Plot
 line_data <- instacart_df %>%
