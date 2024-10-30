@@ -13,12 +13,15 @@ library(p8105.datasets)
 library(plotly)
 library(dplyr)
 library(ggplot2)
+library(flexdashboard)
+library(hexbin)
 
 # Load and prepare data as shown above
 data("instacart", package = "p8105.datasets")
-instacart_df = instacart %>%
+instacart_df = instacart |>
+  janitor::clean_names() |> 
   mutate(weekday = factor(order_dow, labels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")),
-         hour_of_day = factor(order_hour_of_day)) %>%
+         hour_of_day = factor(order_hour_of_day)) |>
   filter(!is.na(aisle_id))
 ```
 
@@ -66,7 +69,24 @@ scatter_plot <- ggplot(scatter_data, aes(x = hour_of_day, y = order_count, color
 ggplotly(scatter_plot)
 ```
 
+# Data for Bar Plot
+```{r}
+# Data for Line Plot
+line_data <- instacart_df %>%
+  group_by(order_number) %>%
+  summarize(total_orders = n_distinct(order_id))  #Count unique orders for each order number
 
+# Create Line Plot
+line_plot <- ggplot(line_data, aes(x = order_number, y = total_orders)) +
+  geom_line(color = "yellow2") +
+  geom_point(color = "tomato2") +  
+  labs(title = "Total Instacart Orders Over Time",
+       x = "Order Number", y = "Total Orders") +
+  theme_minimal()
+
+# Convert to Plotly
+ggplotly(line_plot)
+```
 
 
 
