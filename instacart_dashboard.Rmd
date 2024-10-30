@@ -6,6 +6,7 @@ output:
     toc_float: true
 ---
 
+## here is some information about instacart online grocery shopping in 2017. 
 
 ```{r setup, include = FALSE}
 # Load required libraries
