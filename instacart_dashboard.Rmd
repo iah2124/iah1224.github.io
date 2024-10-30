@@ -79,8 +79,8 @@ line_data <- instacart_df %>%
 
 # Create Line Plot
 line_plot <- ggplot(line_data, aes(x = order_number, y = total_orders)) +
-  geom_line(color = "yellow2") +
-  geom_point(color = "tomato2") +  
+  geom_line(color = "thistle") +
+  geom_point(color = "royalblue2") +  
   labs(title = "Total Instacart Orders Over Time",
        x = "Order Number", y = "Total Orders") +
   theme_minimal()
