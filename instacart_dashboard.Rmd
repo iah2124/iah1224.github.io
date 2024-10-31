@@ -17,7 +17,6 @@ library(ggplot2)
 library(flexdashboard)
 library(hexbin)
 
-# Load and prepare data as shown above
 data("instacart", package = "p8105.datasets")
 instacart_df = instacart |>
   janitor::clean_names() |> 
@@ -27,7 +26,7 @@ instacart_df = instacart |>
 ```
 
 ## Most Ordered Aisles - Bar Plot
-```{r}
+```{r, echo = F}
 
 # Count of orders per aisle
 aisle_counts <- instacart_df %>%
@@ -36,7 +35,6 @@ aisle_counts <- instacart_df %>%
   arrange(desc(order_count)) %>%
   slice_max(order_count, n = 10)
 
-# Create bar plot
 bar_plot <- ggplot(aisle_counts, aes(x = reorder(aisle, order_count), y = order_count)) +
   geom_bar(stat = "identity", fill = "tomato") +
   labs(
@@ -52,7 +50,7 @@ ggplotly(bar_plot)
 
 
 ## Orders by Day and Hour - Scatterplot
-```{r, message = FALSE}
+```{r, echo = FALSE}
 scatter_data <- instacart_df %>%
   group_by(weekday, hour_of_day) %>%
   summarize(order_count = n()) %>%
@@ -71,13 +69,12 @@ ggplotly(scatter_plot)
 ```
 
 ## Total Instacart Orders Over Time by Number of Orders - Line Graph
-```{r}
+```{r, echo = F}
 # Data for Line Plot
 line_data <- instacart_df %>%
   group_by(order_number) %>%
-  summarize(total_orders = n_distinct(order_id))  #Count unique orders for each order number
+  summarize(total_orders = n_distinct(order_id))  
 
-# Create Line Plot
 line_plot <- ggplot(line_data, aes(x = order_number, y = total_orders)) +
   geom_line(color = "thistle") +
   geom_point(color = "royalblue2") +  
@@ -85,11 +82,11 @@ line_plot <- ggplot(line_data, aes(x = order_number, y = total_orders)) +
        x = "Number of times ordered from Instart", y = "Total Orders") +
   theme_minimal()
 
-# Convert to Plotly
 ggplotly(line_plot)
 ```
 
-Finf the repo for HW 4 [here](https://github.com/iah2124/iah2124.github.io)!:)
+Find the repo for HW 4 [here](https://github.com/iah2124/iah2124.github.io)!:)
+
 
 
 
